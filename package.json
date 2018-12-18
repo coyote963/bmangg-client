@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "expresss": "0.0.0",
+    "express": "^4.16.4",
     "vue": "^2.5.20",
     "vue-router": "^3.0.1",
     "vuejs-paginate": "^2.1.0",
