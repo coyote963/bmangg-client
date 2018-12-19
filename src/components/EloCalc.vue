@@ -31,7 +31,7 @@ export default {
         var myloseelo = this.myelo - 32 * e1
         var enemyloseelo = Number(this.enemyelo) + 32 * (1 - Number(e2))
         this.message = 'If you win your elo will be: ' + mywinelo.toPrecision(5) + ' and enemy\'s elo will be ' + enemywinelo.toPrecision(5) +
-        '.\n But if you lose, enemy\'s elo will be ' + myloseelo.toPrecision(5) + ' and enemy\'s elo will climb to ' + enemyloseelo.toPrecision(5)
+        '.\n But if you lose, your elo will be ' + myloseelo.toPrecision(5) + ' and enemy\'s elo will climb to ' + enemyloseelo.toPrecision(5)
       }
     }
   }

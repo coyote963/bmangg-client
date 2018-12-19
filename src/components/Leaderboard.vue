@@ -2,6 +2,7 @@
 <layout-basic>
   <v-flex xs12 sm12 md12>
     <paginate
+      v-model="page"
       :page-count=pageCount
       :page-range="3"
       :margin-pages="2"
@@ -34,6 +35,7 @@
   </v-flex>
   <v-flex xs12 sm12 md12>
   <paginate
+    v-model="page"
     :page-count=pageCount
     :page-range="3"
     :margin-pages="2"

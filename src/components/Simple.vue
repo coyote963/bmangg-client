@@ -165,6 +165,16 @@
                     <a href="mailto:coyoteandbird@gmail.com"><v-list-tile-title deep-purple accent-4>Email</v-list-tile-title></a>
                     </v-list-tile-content>
                 </v-list-tile>
+                <v-list-tile>
+                    <v-list-tile-action>
+                    <span style="color: BlueViolet;">
+                        <i class="fab fa-github-alt"></i>
+                    </span>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                    <a href="https://github.com/coyote963/bmangg"><v-list-tile-title deep-purple accent-4>Github</v-list-tile-title></a>
+                    </v-list-tile-content>
+                </v-list-tile>
                 </v-list>
             </v-card>
             </v-flex>
