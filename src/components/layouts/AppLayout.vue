@@ -79,7 +79,7 @@
 export default {
   data: () => ({
     drawer: null,
-    goDark: false
+    goDark: true
   }),
   props: {
     source: String
