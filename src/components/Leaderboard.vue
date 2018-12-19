@@ -18,7 +18,7 @@
       <v-card>
         <v-card-title>
           <h3 class="headline mb-0">
-            #{{ ( page - 1 ) * 20 + index + 1 }} - In Game Name: {{player.name}}
+            #{{ ( page - 1 ) * 20 + index + 1 }} - {{player.name}}
             <a target="_blank" :href="'https://steamcommunity.com/profiles/'+player._id">
               <i class="fab fa-steam-square"
                 v-if="player._id > 10000000">
