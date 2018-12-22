@@ -2,7 +2,7 @@ Welcome to Neko's map pack server:
 
 This server comes with custom maps! To download, follow the link below
 
-https://cdn.discordapp.com/attachments/263074833884119052/294980011071373322/Community_Expansion_Map_Pack.zip>
+https://bit.ly/2EHlTAV
 
 Install instructions: Just unzip that folder you just downloaded. Move all the files into your maps folder, which should be located at
 %localappdata%\BoringManGame\Maps
