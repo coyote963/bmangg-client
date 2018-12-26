@@ -3,7 +3,6 @@
     <input id="myElo" class="form-control" type="number" v-model="myelo" placeholder="Enter your Elo"><br>
     <input id ="enemyElo" class="form-control" type="number" v-model="enemyelo" placeholder="Enter enemy's Elo"><br>
     <button class="btn btn-primary" v-on:click="calculateElo">Calculate Elo Change</button>
-
     <div v-if="message" class="alert alert-info" role="alert">{{message}}</div>
 </form>
 </template>

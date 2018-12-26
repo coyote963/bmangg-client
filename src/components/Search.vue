@@ -4,26 +4,30 @@
     <v-text-field outline v-model="query" label="Input your in game name, sensitive to spelling"></v-text-field>
     <v-btn v-on:click="updateData">Search</v-btn>
   </v-form>
-  <v-flex xs12 sm8 md8>
-    <div v-for="(player, index) in results" :key="player._id">
-      <v-card>
-        <v-card-title>
-          <h3 class="headline mb-0">
-            {{ index + 1 }} - In Game Name: {{player.name}}
-            <a target="_blank" :href="'https://steamcommunity.com/profiles/'+player._id">
-              <i class="fab fa-steam-square"
-                v-if="player._id > 10000000">
-              </i>
-            </a>
-          </h3>
-        </v-card-title>
-        <v-card-text>
-          Current Rating: {{ player.elo }}
-        </v-card-text>
-      </v-card>
-      <v-divider></v-divider>
-    </div>
-  </v-flex>
+  <v-container grid-list-lg>
+    <v-layout>
+      <v-flex>
+        <div v-for="(player) in results" :key="player._id">
+          <v-card>
+            <v-card-title>
+              <h3 class="headline mb-0">
+                <v-btn flat :to="{ name: 'Profile', params: { id : player._id }}" target="_blank"> {{player.name}} </v-btn>
+                <a target="_blank" :href="'https://steamcommunity.com/profiles/'+player._id">
+                  <i class="fab fa-steam-square"
+                    v-if="player._id > 10000000">
+                  </i>
+                </a>
+              </h3>
+            </v-card-title>
+            <v-card-text>
+              Current Rating: {{ player.elo }}
+            </v-card-text>
+          </v-card>
+          <v-divider></v-divider>
+        </div>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </layout-basic>
 </template>
 <script>
