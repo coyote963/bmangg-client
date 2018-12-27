@@ -172,7 +172,7 @@
                     </span>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                    <a href="https://github.com/coyote963/bmangg"><v-list-tile-title deep-purple accent-4>Github</v-list-tile-title></a>
+                    <a href="https://github.com/coyote963/bmangg-client"><v-list-tile-title deep-purple accent-4>Github</v-list-tile-title></a>
                     </v-list-tile-content>
                 </v-list-tile>
                 </v-list>
