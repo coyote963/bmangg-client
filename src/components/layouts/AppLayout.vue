@@ -55,11 +55,14 @@
       <slot />
     </v-content>
     <v-footer color="blue accent-2" app>
-      <v-switch
-            justify-right
+        <v-flex xs6>
+          <v-switch
             v-model="goDark"
-          ></v-switch>
-      <span class="white--text">&copy; 2018 Coyote and Bird </span>
+            ></v-switch>
+        </v-flex>
+        <v-flex xs6>
+          <div class="white--text">&copy; 2018 Coyote and Bird </div>
+        </v-flex>
     </v-footer>
   </v-app>
 </template>

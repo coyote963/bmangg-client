@@ -1,9 +1,9 @@
 <template>
 <v-container grid-list-lg text-xs-center>
-  <v-layout>
-    <v-flex xs12 sm3>
+  <v-layout row wrap>
+    <v-flex xs12 md3>
       <v-card color="blue darken-3">
-        <v-card-title overflow-hidden>
+        <v-card-title>
           <h1 class="player-rank">
             #{{ player.rank }}
           </h1>
@@ -25,7 +25,7 @@
         </v-card-actions>
       </v-card>
     </v-flex>
-    <v-flex xs12 sm9>
+    <v-flex xs12 md9>
       <v-card color="blue darken-3">
         <matchups v-bind:id="player.user._id"></matchups>
       </v-card>

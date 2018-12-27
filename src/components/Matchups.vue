@@ -7,7 +7,7 @@
     :margin-pages="2"
     :prev-text="'Prev'"
     :next-text="'Next'"
-    :container-class="'pagination'"
+    :container-class="'pagination justify-content-center'"
     :page-class="'page-item'"
     :page-link-class="'page-link'"
     :next-class="'page-item'"
@@ -16,8 +16,9 @@
     :prev-link-class="'page-link'"
     :click-handler="updateData">
   </paginate>
-  <table class="table">
-    <thead>
+  <div class="table-responsive">
+  <table class="table table-hover">
+    <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
         <th scope="col">Date</th>
@@ -44,6 +45,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
   <paginate
     v-model="page"
     :page-count=pageCount
@@ -51,7 +53,7 @@
     :margin-pages="2"
     :prev-text="'Prev'"
     :next-text="'Next'"
-    :container-class="'pagination'"
+    :container-class="'pagination justify-content-center'"
     :page-class="'page-item'"
     :page-link-class="'page-link'"
     :next-class="'page-item'"
@@ -126,3 +128,11 @@ export default {
   }
 }
 </script>
+<style>
+.page-item.active .page-link {
+  background-color: #000000
+}
+.page-link {
+  color: white
+}
+</style>
