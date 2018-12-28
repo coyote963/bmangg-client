@@ -16,6 +16,7 @@
         </v-card-text>
         <v-card-media class="rank-badge">
           <badge v-bind:rank="player.rank"></badge>
+          {{ player.rank | RankName }}
         </v-card-media>
         <v-card-actions>
           <v-btn v-if="player.user._id > 10000000" flat color="deep-orange lighten-2"
@@ -37,6 +38,7 @@
 import Badge from '@/components/Badge'
 import Matchups from '@/components/Matchups'
 import axios from 'axios'
+import RankName from '@/scripts/CalcRank'
 export default {
   data () {
     return {
@@ -68,7 +70,8 @@ export default {
   filters: {
     round: function (value) {
       return Math.ceil(value * 100) / 100
-    }
+    },
+    RankName: RankName
   }
 }
 </script>

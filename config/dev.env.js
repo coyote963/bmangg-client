@@ -5,5 +5,5 @@ const prodEnv = require('./prod.env')
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
   ROOT_API: '"http://localhost:3000/"',
-  TOTAL_PLAYERS : '"1400"'
+  TOTAL_PLAYERS : '"1200"'
 })

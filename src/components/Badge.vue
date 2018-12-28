@@ -5,6 +5,7 @@
 </div>
 </template>
 <script>
+var nr = require('../scripts/NormalizeRank')
 export default {
   props: {rank: Number},
   data: function () {
@@ -14,7 +15,7 @@ export default {
     }
   },
   created () {
-    this.normalizedRank = 21 - Math.floor((this.rank / process.env.TOTAL_PLAYERS) * 22)
+    this.normalizedRank = nr.normalizerank(this.rank)
   },
   methods: {
     getUrl (nrank) {

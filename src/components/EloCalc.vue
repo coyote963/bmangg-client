@@ -1,10 +1,10 @@
 <template>
-<form class="form-inline">
-    <input id="myElo" class="form-control" type="number" v-model="myelo" placeholder="Enter your Elo"><br>
-    <input id ="enemyElo" class="form-control" type="number" v-model="enemyelo" placeholder="Enter enemy's Elo"><br>
+<v-form>
+    <v-text-field id="myElo" class="form-control" type="number" v-model="myelo" placeholder="Enter your Elo"></v-text-field>
+    <v-text-field id ="enemyElo" class="form-control" type="number" v-model="enemyelo" placeholder="Enter enemy's Elo"></v-text-field>
     <button class="btn btn-primary" v-on:click="calculateElo">Calculate Elo Change</button>
-    <div v-if="message" class="alert alert-info" role="alert">{{message}}</div>
-</form>
+    <div>{{message}}</div>
+</v-form>
 </template>
 
 <script>
