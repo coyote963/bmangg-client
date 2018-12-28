@@ -23,6 +23,7 @@
         <th scope="col">#</th>
         <th scope="col">Date</th>
         <th scope="col">Victim</th>
+        <th scope="col">Weapon</th>
         <th scope="col">Killer</th>
       </tr>
     </thead>
@@ -35,6 +36,9 @@
             :to="{ name: 'Profile', params: { id: matchup.victim._id}}">
             {{matchup.victim.name}}
           </v-btn>
+        </td>
+        <td>
+          {{matchup.weapon}}
         </td>
         <td>
           <v-btn flat
@@ -87,7 +91,7 @@ export default {
       axios
         .get(process.env.ROOT_API + 'kills/' + this.id + '/' + pageNum)
         .then(response => {
-          this.page = response.data.current_page
+          this.page = pageNum
           this.data = response.data.data
           this.pageCount = response.data.last_page
         })
