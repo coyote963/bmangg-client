@@ -27,9 +27,27 @@
       </v-card>
     </v-flex>
     <v-flex xs12 md9>
-      <v-card color="blue darken-3">
-        <matchups v-bind:id="player.user._id"></matchups>
-      </v-card>
+        <v-tabs v-model="active"
+          color="light-blue lighten-1"
+          slider-color="yellow"
+        >
+          <v-tab>
+            Matchups
+          </v-tab>
+          <v-tab-item>
+            <v-card color="blue darken-3">
+              <matchups v-bind:id="player.user._id"></matchups>
+            </v-card>
+          </v-tab-item>
+          <v-tab>
+            Statistics
+          </v-tab>
+          <v-tab-item>
+            <v-card color="white">
+              <rating-graph v-bind:id="player.user._id"></rating-graph>
+            </v-card>
+          </v-tab-item>
+        </v-tabs>
     </v-flex>
   </v-layout>
 </v-container>
@@ -39,6 +57,7 @@ import Badge from '@/components/Badge'
 import Matchups from '@/components/Matchups'
 import axios from 'axios'
 import RankName from '@/scripts/CalcRank'
+import RatingGraph from '@/components/RatingGraph'
 export default {
   data () {
     return {
@@ -47,7 +66,8 @@ export default {
   },
   components: {
     Badge: Badge,
-    Matchups: Matchups
+    Matchups: Matchups,
+    RatingGraph: RatingGraph
   },
   created () {
     axios
