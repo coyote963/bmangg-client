@@ -70,15 +70,15 @@ export default {
       axios
         .get(process.env.ROOT_API + 'kills/' + this.id + '/limit/' + this.zoomSelect)
         .then(response => {
-          this.ratingHistory = response.data.map(this.getRanks)
-          this.dates = response.data.map(this.getDates)
+          this.ratingHistory = response.data.reverse().map(this.getRanks)
+          this.dates = response.data.reverse().map(this.getDates)
           this.fillData()
         })
         .catch(error => console.log(error))
     }
   },
   watch: {
-    '$route' (to, from) {
+    'id' (to, from) {
       this.updateData()
     },
     zoomSelect (to, from) {
