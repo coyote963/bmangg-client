@@ -11,7 +11,7 @@
           <v-card>
             <v-card-title>
               <h3 class="headline mb-0">
-                <v-btn flat :to="{ name: 'Profile', params: { id : player._id }}" target="_blank"> {{player.name}} </v-btn>
+                <v-btn flat :to="{ name: 'Profile', params: { id : player._id }}"> {{player.name}} </v-btn>
                 <a target="_blank" :href="'https://steamcommunity.com/profiles/'+player._id">
                   <i class="fab fa-steam-square"
                     v-if="player._id > 10000000">
