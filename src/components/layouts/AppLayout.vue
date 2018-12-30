@@ -6,7 +6,7 @@
       app
     >
       <v-list dense>
-        <v-list-tile :to="{name:'Simple'}">
+        <v-list-tile exact :to="{name:'Simple'}">
           <v-list-tile-action>
             <v-icon>home</v-icon>
           </v-list-tile-action>

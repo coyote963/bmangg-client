@@ -31,7 +31,7 @@
                 <v-card-title>
                   <div class="headline">
                     #{{ ( page - 1 ) * 20 + index + 1 }}
-                    <v-btn flat :to="{ name: 'Profile', params: { id : player._id }}" target="_blank"> {{player.name}} </v-btn>
+                    <v-btn flat :to="{ name: 'Profile', params: { id : player._id }}"> {{player.name}} </v-btn>
                   </div>
                 </v-card-title>
                 <v-card-text>

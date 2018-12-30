@@ -32,7 +32,7 @@
           slider-color="yellow"
         >
           <v-tab>
-            Matchups
+            History
           </v-tab>
           <v-tab-item>
             <v-card color="blue darken-3">
@@ -40,7 +40,7 @@
             </v-card>
           </v-tab-item>
           <v-tab>
-            Statistics
+            Rating Graph
           </v-tab>
           <v-tab-item>
             <v-card color="white">
@@ -70,21 +70,11 @@ export default {
     RatingGraph: RatingGraph
   },
   created () {
-    axios
-      .get(process.env.ROOT_API + 'players/rank/' + this.$route.params.id)
-      .then(response => {
-        this.player = response.data
-      })
-      .catch(error => console.log(error))
+    this.updateData()
   },
   watch: {
     '$route' (to, from) {
-      axios
-        .get(process.env.ROOT_API + 'players/rank/' + this.$route.params.id)
-        .then(response => {
-          this.player = response.data
-        })
-        .catch(error => console.log(error))
+      this.updateData()
     }
   },
   filters: {
@@ -92,6 +82,16 @@ export default {
       return Math.ceil(value * 100) / 100
     },
     RankName: RankName
+  },
+  methods: {
+    updateData: function () {
+      axios
+        .get(process.env.ROOT_API + 'players/rank/' + this.$route.params.id)
+        .then(response => {
+          this.player = response.data
+        })
+        .catch(error => console.log(error))
+    }
   }
 }
 </script>

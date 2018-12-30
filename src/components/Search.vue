@@ -1,11 +1,11 @@
 <template>
 <layout-basic>
-  <v-form>
-    <v-text-field outline v-model="query" label="Input your in game name, sensitive to spelling"></v-text-field>
-    <v-btn v-on:click="updateData">Search</v-btn>
-  </v-form>
   <v-container grid-list-lg>
     <v-layout>
+      <v-flex>
+        <v-text-field v-on:keyup.enter="updateData" id="new query" outline v-model="query" label="Input your in game name, sensitive to spelling"></v-text-field>
+        <v-btn @click="updateData">Submit</v-btn>
+      </v-flex>
       <v-flex>
         <div v-for="(player) in results" :key="player._id">
           <v-card>
