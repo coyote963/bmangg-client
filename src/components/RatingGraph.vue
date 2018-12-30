@@ -71,7 +71,7 @@ export default {
         .get(process.env.ROOT_API + 'kills/' + this.id + '/limit/' + this.zoomSelect)
         .then(response => {
           this.ratingHistory = response.data.reverse().map(this.getRanks)
-          this.dates = response.data.reverse().map(this.getDates)
+          this.dates = response.data.map(this.getDates)
           this.fillData()
         })
         .catch(error => console.log(error))
