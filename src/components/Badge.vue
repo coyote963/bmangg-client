@@ -1,7 +1,6 @@
 <template>
 <div>
   <v-img class="badge" :src="getUrl(normalizedRank)"></v-img>
-  {{boi}}
 </div>
 </template>
 <script>
@@ -10,8 +9,7 @@ export default {
   props: {rank: Number},
   data: function () {
     return {
-      normalizedRank: null,
-      boi: null
+      normalizedRank: null
     }
   },
   created () {
