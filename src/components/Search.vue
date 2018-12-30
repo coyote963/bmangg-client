@@ -7,6 +7,12 @@
         <v-btn @click="updateData">Submit</v-btn>
       </v-flex>
       <v-flex>
+        <v-alert
+          :value="usernotfound"
+            type="warning"
+        >
+      User not found! Check your spelling.
+    </v-alert>
         <div v-for="(player) in results" :key="player._id">
           <v-card>
             <v-card-title>
@@ -37,6 +43,7 @@ export default {
   data () {
     return {
       query: '',
+      usernotfound: false,
       results: []
     }
   },
@@ -44,7 +51,14 @@ export default {
     updateData () {
       axios
         .get(process.env.ROOT_API + 'players/search/' + this.query)
-        .then(response => { this.results = response.data })
+        .then(response => {
+          if (response.data.length === 0) {
+            this.usernotfound = true
+          } else {
+            this.usernotfound = false
+          }
+          this.results = response.data
+        })
     }
   },
   components: {
