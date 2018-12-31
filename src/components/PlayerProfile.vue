@@ -29,7 +29,7 @@
     <v-flex xs12 md9>
         <v-tabs v-model="active"
           color="light-blue lighten-1"
-          slider-color="yellow"
+          slider-color="pink accent-3"
         >
           <v-tab>
             History
@@ -43,7 +43,8 @@
             Rating Graph
           </v-tab>
           <v-tab-item>
-            <v-card color="white">
+            <v-card color="deep-orange lighten-5">
+              <h1 class="graph-title">Rating Graph</h1>
               <rating-graph v-bind:id="player.user._id"></rating-graph>
             </v-card>
           </v-tab-item>
@@ -51,8 +52,18 @@
             Weapon Picks
           </v-tab>
           <v-tab-item>
-            <v-card color="white">
+            <v-card color="deep-orange lighten-5">
+              <h1 class="graph-title">Favorite Weapons</h1>
               <fav-weapon-bar-chart v-bind:id="player.user._id"></fav-weapon-bar-chart>
+            </v-card>
+          </v-tab-item>
+          <v-tab>
+            Weapon Counters
+          </v-tab>
+          <v-tab-item>
+            <v-card color="deep-orange lighten-5">
+              <h1 class="graph-title">Weapons that counter this player</h1>
+              <counter-weapon-bar-chart v-bind:id="player.user._id"></counter-weapon-bar-chart>
             </v-card>
           </v-tab-item>
         </v-tabs>
@@ -67,6 +78,7 @@ import axios from 'axios'
 import RankName from '@/scripts/CalcRank'
 import RatingGraph from '@/components/RatingGraph'
 import FavWeaponBarChart from '@/components/FavWeaponBarChart'
+import CounterWeaponBarChart from '@/components/CounterWeaponBarChart'
 export default {
   data () {
     return {
@@ -77,7 +89,8 @@ export default {
     Badge: Badge,
     Matchups: Matchups,
     RatingGraph: RatingGraph,
-    FavWeaponBarChart: FavWeaponBarChart
+    FavWeaponBarChart: FavWeaponBarChart,
+    CounterWeaponBarChart: CounterWeaponBarChart
   },
   created () {
     this.updateData()
@@ -114,5 +127,8 @@ export default {
 }
 .rank-badge {
   padding: 16px;
+}
+.graph-title {
+  color: rgb(1,87,155)
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-radio-group light v-model="zoomSelect" row>
+    <v-radio-group center light v-model="zoomSelect" row>
       <v-radio
         :value="25"
         label="Last 25"
@@ -61,7 +61,7 @@ export default {
         labels: this.dates,
         datasets: [{
           label: 'Rating History',
-          backgroundColor: 'rgba(255,99,132,0.5)',
+          backgroundColor: 'rgba(1,87,155,0.6)',
           data: this.ratingHistory
         }]
       }

@@ -26,7 +26,7 @@ export default {
       this.datacollection = {
         labels: this.names,
         datasets: [{
-          label: 'Top Weapons',
+          label: 'Top Counter Weapons',
           backgroundColor: 'rgba(1,87,155,0.6)',
           data: this.frequency
         }]
@@ -40,7 +40,7 @@ export default {
     },
     updateData () {
       axios
-        .get(process.env.ROOT_API + 'kills/weapons/' + this.id)
+        .get(process.env.ROOT_API + 'kills/weaponcounters/' + this.id)
         .then(response => {
           this.names = response.data.slice(0, 5).map(this.getWeapon)
           this.frequency = response.data.slice(0, 5).map(this.getFrequency)
