@@ -11,8 +11,8 @@
           :value="usernotfound"
             type="warning"
         >
-      User not found! Check your spelling.
-    </v-alert>
+          User not found! Check your spelling.
+        </v-alert>
         <div v-for="(player) in results" :key="player._id">
           <v-card>
             <v-card-title>

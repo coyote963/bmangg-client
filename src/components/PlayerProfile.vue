@@ -47,6 +47,14 @@
               <rating-graph v-bind:id="player.user._id"></rating-graph>
             </v-card>
           </v-tab-item>
+          <v-tab>
+            Weapon Picks
+          </v-tab>
+          <v-tab-item>
+            <v-card color="white">
+              <fav-weapon-bar-chart v-bind:id="player.user._id"></fav-weapon-bar-chart>
+            </v-card>
+          </v-tab-item>
         </v-tabs>
     </v-flex>
   </v-layout>
@@ -58,6 +66,7 @@ import Matchups from '@/components/Matchups'
 import axios from 'axios'
 import RankName from '@/scripts/CalcRank'
 import RatingGraph from '@/components/RatingGraph'
+import FavWeaponBarChart from '@/components/FavWeaponBarChart'
 export default {
   data () {
     return {
@@ -67,7 +76,8 @@ export default {
   components: {
     Badge: Badge,
     Matchups: Matchups,
-    RatingGraph: RatingGraph
+    RatingGraph: RatingGraph,
+    FavWeaponBarChart: FavWeaponBarChart
   },
   created () {
     this.updateData()
