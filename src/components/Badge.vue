@@ -6,14 +6,14 @@
 <script>
 var nr = require('../scripts/NormalizeRank')
 export default {
-  props: {rank: Number},
+  props: {rating: Number},
   data: function () {
     return {
       normalizedRank: null
     }
   },
   created () {
-    this.normalizedRank = nr.normalizerank(this.rank)
+    this.normalizedRank = nr.normalizerank(this.rating)
   },
   methods: {
     getUrl (nrank) {
@@ -22,8 +22,8 @@ export default {
     }
   },
   watch: {
-    'rank' (to, from) {
-      this.normalizedRank = 21 - Math.floor((this.rank / process.env.TOTAL_PLAYERS) * 22)
+    'rating' (to, from) {
+      this.normalizedRank = 21 - Math.floor((this.rating / process.env.TOTAL_PLAYERS) * 22)
     }
   }
 }

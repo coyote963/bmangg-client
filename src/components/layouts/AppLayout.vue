@@ -46,7 +46,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="blue accent-2" dark fixed app>
+    <v-toolbar color="rgb(48,197,255)" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title :to="{name:'Simple'}">BMAN.GG</v-toolbar-title>
     </v-toolbar>
@@ -54,7 +54,7 @@
     <v-content>
       <slot />
     </v-content>
-    <v-footer color="blue accent-2" app>
+    <v-footer color="rgb(48,197,255)" app>
         <v-flex xs6>
           <v-switch
             v-model="goDark"

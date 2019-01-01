@@ -15,8 +15,8 @@
           </h4>
         </v-card-text>
         <v-card-media class="rank-badge">
-          <badge v-bind:rank="player.rank"></badge>
-          {{ player.rank | RankName }}
+          <badge v-bind:rating="player.user.elo"></badge>
+          {{ player.user.elo | RankName }}
         </v-card-media>
         <v-card-actions>
           <v-btn v-if="player.user._id > 10000000" flat color="deep-orange lighten-2"

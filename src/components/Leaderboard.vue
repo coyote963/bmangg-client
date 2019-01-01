@@ -1,6 +1,6 @@
 <template>
 <layout-basic>
-  <v-container grid-list-lg>
+  <v-container grid-list-xl>
     <paginate
       v-model="page"
       :page-count=pageCount
@@ -17,38 +17,36 @@
       :prev-link-class="'page-link'"
       :click-handler="updateData">
     </paginate>
-    <v-layout justify-center column>
-      <div v-for="(player, index) in data" :key="player._id">
-        <v-flex xs12 md9>
-          <v-card color="blue darken-3">
-            <v-layout row>
-              <v-flex xs2 md2>
-                <div id="badgediv">
-                  <badge v-bind:rank="( page - 1 ) * 20 + index + 1" ></badge>
+    <v-layout row wrap >
+      <v-flex xs12 md6 v-for="(player, index) in data" :key="player._id">
+        <v-card color="blue darken-3">
+          <v-layout row>
+            <v-flex xs2 md4>
+              <div id="badgediv">
+                <badge v-bind:rating="player.elo" ></badge>
+              </div>
+            </v-flex>
+            <v-flex xs10 md8>
+              <v-card-title>
+                <div class="headline">
+                  #{{ ( page - 1 ) * 20 + index + 1 }}
+                  <v-btn flat large :to="{ name: 'Profile', params: { id : player._id }}"> {{player.name}} </v-btn>
                 </div>
-              </v-flex>
-              <v-flex xs10 md10>
-                <v-card-title>
-                  <div class="headline">
-                    #{{ ( page - 1 ) * 20 + index + 1 }}
-                    <v-btn flat :to="{ name: 'Profile', params: { id : player._id }}"> {{player.name}} </v-btn>
-                  </div>
-                </v-card-title>
-                <v-card-text>
-                  Current Rating: {{ player.elo }}
-                  <a target="_blank" :href="'https://steamcommunity.com/profiles/'+player._id">
-                    <i class="fab fa-steam-square"
-                      v-if="player._id > 10000000">
-                    </i>
-                  </a>
-                </v-card-text>
-              </v-flex>
-            </v-layout>
-            <v-card-text>
-            </v-card-text>
-          </v-card>
-        </v-flex>
-      </div>
+              </v-card-title>
+              <v-card-text>
+                Current Rating: {{ player.elo }}
+                <a target="_blank" :href="'https://steamcommunity.com/profiles/'+player._id">
+                  <i class="fab fa-steam-square"
+                    v-if="player._id > 10000000">
+                  </i>
+                </a>
+              </v-card-text>
+            </v-flex>
+          </v-layout>
+          <v-card-text>
+          </v-card-text>
+        </v-card>
+      </v-flex>
     </v-layout>
     <paginate
       v-model="page"
