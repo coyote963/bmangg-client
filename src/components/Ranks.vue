@@ -11,70 +11,70 @@
       <table class="table">
         <tbody>
           <tr>
-            <td><img src="../assets/badges/0.svg">Newbie</td>
+            <td><img src="../assets/badges/0.svg">Earth I</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/1.svg">Newbie II</td>
+            <td><img src="../assets/badges/1.svg">Earth II</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/2.svg">Newbie III</td>
+            <td><img src="../assets/badges/2.svg">Earth III</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/3.svg">Trainee I</td>
+            <td><img src="../assets/badges/3.svg">Grass I</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/4.svg">Trainee II</td>
+            <td><img src="../assets/badges/4.svg">Grass II</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/5.svg">Trainee III</td>
+            <td><img src="../assets/badges/5.svg">Grass III</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/6.svg">Trainee IIII</td>
+            <td><img src="../assets/badges/6.svg">Grass IIII</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/7.svg">Veteran I</td>
+            <td><img src="../assets/badges/7.svg">Water I</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/8.svg">Veteran II</td>
+            <td><img src="../assets/badges/8.svg">Water II</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/9.svg">Veteran III</td>
+            <td><img src="../assets/badges/9.svg">Water III</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/10.svg">Elite</td>
+            <td><img src="../assets/badges/10.svg">Fire I</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/11.svg">Superstar</td>
+            <td><img src="../assets/badges/11.svg">Fire II</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/12.svg">Virtuoso</td>
+            <td><img src="../assets/badges/12.svg">Fire III</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/13.svg">Prodigy</td>
+            <td><img src="../assets/badges/13.svg">Gold I</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/14.svg">Genius</td>
+            <td><img src="../assets/badges/14.svg">Gold II</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/15.svg">Ace</td>
+            <td><img src="../assets/badges/15.svg">Gold III</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/16.svg">Champion</td>
+            <td><img src="../assets/badges/16.svg">Platinum I</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/17.svg">Guru</td>
+            <td><img src="../assets/badges/17.svg">Platinum II</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/18.svg">Sage</td>
+            <td><img src="../assets/badges/18.svg">Platinum III</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/19.svg">Master</td>
+            <td><img src="../assets/badges/19.svg">Elite</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/20.svg">Grandmaster</td>
+            <td><img src="../assets/badges/20.svg">Master</td>
           </tr>
           <tr>
-            <td><img src="../assets/badges/21.svg">Superhuman</td>
+            <td><img src="../assets/badges/21.svg">Grandmaster</td>
           </tr>
         </tbody>
       </table>
