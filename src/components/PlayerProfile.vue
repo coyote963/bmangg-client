@@ -25,6 +25,7 @@
           <v-btn flat color="deep-orange lighten-2" :to="{ name: 'Ranks' }">Ranks</v-btn>
         </v-card-actions>
       </v-card>
+      <v-btn block outline color="primary" v-on:click="updateData">Update</v-btn>
     </v-flex>
     <v-flex xs12 md9>
         <v-tabs v-model="active"
