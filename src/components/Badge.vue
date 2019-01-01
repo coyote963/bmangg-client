@@ -23,7 +23,7 @@ export default {
   },
   watch: {
     'rating' (to, from) {
-      this.normalizedRank = 21 - Math.floor((this.rating / process.env.TOTAL_PLAYERS) * 22)
+      this.normalizedRank = nr.normalizerank(this.rating)
     }
   }
 }
