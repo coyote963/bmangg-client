@@ -9,23 +9,19 @@
           </h1>
         </v-card-title>
         <v-card-text>
-          <h5>{{ player.user.name }}</h5>
+          <h3>{{ player.user.name }}</h3>
           <h4 class="font-weight-light">
             {{player.user.elo | round}} Elo
           </h4>
-        </v-card-text>
-        <v-card-media class="rank-badge">
+          <h4>{{ player.user.elo | RankName }}</h4>
           <badge v-bind:rating="player.user.elo"></badge>
-          {{ player.user.elo | RankName }}
-        </v-card-media>
-        <v-card-actions>
-          <v-btn v-if="player.user._id > 10000000" flat color="deep-orange lighten-2"
+        </v-card-text>
+      </v-card>
+      <v-btn block outline color="primary"  v-if="player.user._id > 10000000"
             :href="'https://steamcommunity.com/profiles/'+player.user._id"
             target="_blank">Steam</v-btn>
-          <v-btn flat color="deep-orange lighten-2" :to="{ name: 'Ranks' }">Ranks</v-btn>
-        </v-card-actions>
-      </v-card>
       <v-btn block outline color="primary" v-on:click="updateData">Update</v-btn>
+      <v-btn block outline color="primary" :to="{ name: 'Ranks' }">What are Ranks?</v-btn>
     </v-flex>
     <v-flex xs12 md9>
         <v-tabs v-model="active"
@@ -93,7 +89,7 @@ export default {
     FavWeaponBarChart: FavWeaponBarChart,
     CounterWeaponBarChart: CounterWeaponBarChart
   },
-  created () {
+  mounted () {
     this.updateData()
   },
   watch: {

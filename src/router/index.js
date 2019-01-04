@@ -6,6 +6,7 @@ import Search from '@/components/Search'
 import Leaderboard from '@/components/Leaderboard'
 import PlayerComponent from '@/components/layouts/PlayerComponent'
 import Ranks from '@/components/Ranks'
+import Maps from '@/components/Maps'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +41,11 @@ export default new Router({
       path: '/ranks',
       name: 'Ranks',
       component: Ranks
+    },
+    {
+      path: '/maps',
+      name: 'Maps',
+      component: Maps
     }
   ]
 })

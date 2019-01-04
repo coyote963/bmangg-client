@@ -18,6 +18,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
+    "compute-histogram": "^0.9.6",
     "connect-history-api-fallback": "^1.5.0",
     "express": "^4.16.4",
     "moment": "^2.23.0",

@@ -111,6 +111,6 @@ export default {
 </script>
 <style>
 .badge {
-  width: 100%;
+  width: 75%;
 }
 </style>
