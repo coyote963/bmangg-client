@@ -110,7 +110,4 @@ export default {
 }
 </script>
 <style>
-.badge {
-  width: 75%;
-}
 </style>

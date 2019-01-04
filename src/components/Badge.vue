@@ -1,5 +1,5 @@
 <template>
-  <v-img centered class="badge" :src="getUrl(normalizedRank)"></v-img>
+  <v-img :src="getUrl(normalizedRank)"></v-img>
 </template>
 <script>
 var nr = require('../scripts/NormalizeRank')
